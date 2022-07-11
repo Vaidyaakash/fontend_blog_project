@@ -1,12 +1,16 @@
-import React, { useContext } from 'react'
+import React, { useEffect, useState } from 'react'
 import Block2 from '../Blocks/Block2';
 import Block3 from '../Blocks/Block3';
-import { data } from '../Data/BlogApi';
 
 const Sports = () => {
-  const [response2] = useContext(data)
-  return (
+  const [response2, setResponse2] = useState([])
 
+  useEffect(() => {
+    const sports = "https://blogapis1.herokuapp.com/category/sports"
+    fetch(sports).then(res => res.json()).then(result => setResponse2(result))
+  })
+
+  return (
     <div id='res'>
       <div className='result'>
         <div className='bollywood'>

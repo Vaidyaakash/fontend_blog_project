@@ -9,27 +9,24 @@ import Tourism from './Pages/Tourism';
 import Health from './Pages/Health';
 import Navigater from './Pages/Navigater';
 import "./Style.css"
-import BlogApi from './Data/BlogApi';
 
 
 const App = () => {
 
   return (
-    <BlogApi>
-      <BrowserRouter>
-        <Nav />
-        <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='/home' element={<Home />} />
-          <Route path='/health' element={<Health />} />
-          <Route path='/sports' element={<Sports />} />
-          <Route path='/bollywood' element={<Bollywood />} />
-          <Route path='/tourism' element={<Tourism />} />
-          <Route path='/technology' element={<Technology />} />
-          <Route path='/:category/:ids' element={<Navigater />} />
-        </Routes>
-      </BrowserRouter>
-    </BlogApi>
+    <BrowserRouter>
+      <Nav />
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/home' element={<Home />} />
+        <Route path='/health' element={<Health />} />
+        <Route path='/sports' element={<Sports />} />
+        <Route path='/bollywood' element={<Bollywood />} />
+        <Route path='/tourism' element={<Tourism />} />
+        <Route path='/technology' element={<Technology />} />
+        <Route path='/:category/:ids' element={<Navigater />} />
+      </Routes>
+    </BrowserRouter>
   )
 }
 
